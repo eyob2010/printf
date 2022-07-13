@@ -15,14 +15,14 @@ int _printf(const char *format, ...)
 	{
 		while (*traverse != '%')
 		{
-			_putchar(*traverse);
+			putchar(*traverse);
 			traverse++;
 		}
 		traverse++;
 		switch (*traverse)
 		{
 			case 'c' : i = va_arg(arg, int);
-				   _putchar(i);
+				   putchar(i);
 				   break;
 			case 's' : s = va_arg(arg, char *);
 				   puts (s);
